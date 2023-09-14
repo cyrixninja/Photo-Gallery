@@ -200,10 +200,7 @@ var applyClasses = function applyClasses(el, top) {
   var options = el.options,
       position = el.position,
       node = el.node,
-      data = el.data;
-
-
-  var hide = function hide() {
+      data = el.data;var hide = function hide() {
     if (!el.animated) return;
 
     removeClasses(node, options.animatedClassNames);

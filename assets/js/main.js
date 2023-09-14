@@ -11,10 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         preloader.remove();
       }, 2000);
     });
-  }
-
-
-  const mobileNavShow = document.querySelector('.mobile-nav-show');
+  }const mobileNavShow = document.querySelector('.mobile-nav-show');
   const mobileNavHide = document.querySelector('.mobile-nav-hide');
 
   document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
@@ -61,10 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         dropDownIndicator.classList.toggle('bi-chevron-down');
       }
     })
-  });
-
-
-  const scrollTop = document.querySelector('.scroll-top');
+  });const scrollTop = document.querySelector('.scroll-top');
   if (scrollTop) {
     const togglescrollTop = function() {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
@@ -79,10 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const glightbox = GLightbox({
     selector: '.glightbox'
-  });
-
-
-  new Swiper('.slides-1', {
+  });new Swiper('.slides-1', {
     speed: 600,
     loop: true,
     autoplay: {
@@ -128,10 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
       }
     }
-  });
-
-
-  function aos_init() {
+  });function aos_init() {
     AOS.init({
       duration: 1000,
       easing: 'ease-in-out',

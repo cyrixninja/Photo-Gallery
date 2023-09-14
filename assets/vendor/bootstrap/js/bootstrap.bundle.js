@@ -309,10 +309,7 @@
    * Bootstrap dom/event-handler.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -588,10 +585,7 @@
    * Bootstrap util/config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Class definition
    */
 
@@ -641,10 +635,7 @@
    * Bootstrap base-component.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -824,10 +815,7 @@
    * Bootstrap alert.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -899,10 +887,7 @@
    * Bootstrap button.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -963,10 +948,7 @@
    * Bootstrap util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -1083,10 +1065,7 @@
    * Bootstrap carousel.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -1456,10 +1435,7 @@
    * Bootstrap collapse.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -1767,10 +1743,7 @@
         return;
       } // Flow doesn't support to extend this property, but it's the most
       // effective way to apply styles to an HTMLElement
-      // $FlowFixMe[cannot-write]
-
-
-      Object.assign(element.style, style);
+      // $FlowFixMe[cannot-write]    Object.assign(element.style, style);
       Object.keys(attributes).forEach(function (name) {
         var value = attributes[name];
 
@@ -1825,10 +1798,7 @@
         });
       });
     };
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const applyStyles$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst applyStyles$1 = {
     name: 'applyStyles',
     enabled: true,
     phase: 'write',
@@ -1936,15 +1906,9 @@
         do {
           if (next && parent.isSameNode(next)) {
             return true;
-          } // $FlowFixMe[prop-missing]: need a better way to handle this...
-
-
-          next = next.parentNode || next.host;
+          } // $FlowFixMe[prop-missing]: need a better way to handle this...        next = next.parentNode || next.host;
         } while (next);
-      } // Give up, the result is false
-
-
-    return false;
+      } // Give up, the result is false  return false;
   }
 
   function getComputedStyle$1(element) {
@@ -1986,10 +1950,7 @@
 
     return element.offsetParent;
   } // `.offsetParent` reports `null` for fixed elements, while absolute elements
-  // return the containing block
-
-
-  function getContainingBlock(element) {
+  // return the containing blockfunction getContainingBlock(element) {
     var isFirefox = /firefox/i.test(getUAString());
     var isIE = /Trident/i.test(getUAString());
 
@@ -2022,10 +1983,7 @@
 
     return null;
   } // Gets the closest ancestor positioned element. Handles some edge cases,
-  // such as table ancestors and cross browser bugs.
-
-
-  function getOffsetParent(element) {
+  // such as table ancestors and cross browser bugs.function getOffsetParent(element) {
     var window = getWindow(element);
     var offsetParent = getTrueOffsetParent(element);
 
@@ -2124,10 +2082,7 @@
 
     if (arrowElement == null) {
       return;
-    } // CSS selector
-
-
-    if (typeof arrowElement === 'string') {
+    } // CSS selector  if (typeof arrowElement === 'string') {
       arrowElement = state.elements.popper.querySelector(arrowElement);
 
       if (!arrowElement) {
@@ -2140,10 +2095,7 @@
     }
 
     state.elements.arrow = arrowElement;
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const arrow$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst arrow$1 = {
     name: 'arrow',
     enabled: true,
     phase: 'main',
@@ -2222,10 +2174,7 @@
           heightProp = 'scrollHeight';
           widthProp = 'scrollWidth';
         }
-      } // $FlowFixMe[incompatible-cast]: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it
-
-
-      offsetParent = offsetParent;
+      } // $FlowFixMe[incompatible-cast]: force type refinement, we compare offsetParent with window above, but Flow doesn't detect it    offsetParent = offsetParent;
 
       if (placement === top || (placement === left || placement === right) && variation === end) {
         sideY = bottom;
@@ -2307,10 +2256,7 @@
     state.attributes.popper = Object.assign({}, state.attributes.popper, {
       'data-popper-placement': state.placement
     });
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const computeStyles$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst computeStyles$1 = {
     name: 'computeStyles',
     enabled: true,
     phase: 'beforeWrite',
@@ -2354,10 +2300,7 @@
         window.removeEventListener('resize', instance.update, passive);
       }
     };
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const eventListeners = {
+  } // eslint-disable-next-line import/no-unused-modulesconst eventListeners = {
     name: 'eventListeners',
     enabled: true,
     phase: 'write',
@@ -2534,27 +2477,18 @@
     return clippingParent === viewport ? rectToClientRect(getViewportRect(element, strategy)) : isElement(clippingParent) ? getInnerBoundingClientRect(clippingParent, strategy) : rectToClientRect(getDocumentRect(getDocumentElement(element)));
   } // A "clipping parent" is an overflowable container with the characteristic of
   // clipping (or hiding) overflowing elements with a position different from
-  // `initial`
-
-
-  function getClippingParents(element) {
+  // `initial`function getClippingParents(element) {
     var clippingParents = listScrollParents(getParentNode(element));
     var canEscapeClipping = ['absolute', 'fixed'].indexOf(getComputedStyle$1(element).position) >= 0;
     var clipperElement = canEscapeClipping && isHTMLElement(element) ? getOffsetParent(element) : element;
 
     if (!isElement(clipperElement)) {
       return [];
-    } // $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414
-
-
-    return clippingParents.filter(function (clippingParent) {
+    } // $FlowFixMe[incompatible-return]: https://github.com/facebook/flow/issues/1414  return clippingParents.filter(function (clippingParent) {
       return isElement(clippingParent) && contains(clippingParent, clipperElement) && getNodeName(clippingParent) !== 'body';
     });
   } // Gets the maximum area that the element is visible in due to any number of
-  // clipping parents
-
-
-  function getClippingRect(element, boundary, rootBoundary, strategy) {
+  // clipping parentsfunction getClippingRect(element, boundary, rootBoundary, strategy) {
     var mainClippingParents = boundary === 'clippingParents' ? getClippingParents(element) : [].concat(boundary);
     var clippingParents = [].concat(mainClippingParents, [rootBoundary]);
     var firstClippingParent = clippingParents[0];
@@ -2717,10 +2651,7 @@
 
     if (allowedPlacements.length === 0) {
       allowedPlacements = placements$1;
-    } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...
-
-
-    var overflows = allowedPlacements.reduce(function (acc, placement) {
+    } // $FlowFixMe[incompatible-type]: Flow seems to have problems with two array unions...  var overflows = allowedPlacements.reduce(function (acc, placement) {
       acc[placement] = detectOverflow(state, {
         placement: placement,
         boundary: boundary,
@@ -2860,10 +2791,7 @@
       state.placement = firstFittingPlacement;
       state.reset = true;
     }
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const flip$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst flip$1 = {
     name: 'flip',
     enabled: true,
     phase: 'main',
@@ -2922,10 +2850,7 @@
       'data-popper-reference-hidden': isReferenceHidden,
       'data-popper-escaped': hasPopperEscaped
     });
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const hide$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst hide$1 = {
     name: 'hide',
     enabled: true,
     phase: 'main',
@@ -2974,10 +2899,7 @@
     }
 
     state.modifiersData[name] = data;
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const offset$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst offset$1 = {
     name: 'offset',
     enabled: true,
     phase: 'main',
@@ -2998,10 +2920,7 @@
       strategy: 'absolute',
       placement: state.placement
     });
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const popperOffsets$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst popperOffsets$1 = {
     name: 'popperOffsets',
     enabled: true,
     phase: 'read',
@@ -3133,10 +3052,7 @@
     }
 
     state.modifiersData[name] = data;
-  } // eslint-disable-next-line import/no-unused-modules
-
-
-  const preventOverflow$1 = {
+  } // eslint-disable-next-line import/no-unused-modulesconst preventOverflow$1 = {
     name: 'preventOverflow',
     enabled: true,
     phase: 'main',
@@ -3165,10 +3081,7 @@
     var scaleY = round(rect.height) / element.offsetHeight || 1;
     return scaleX !== 1 || scaleY !== 1;
   } // Returns the composite rect of an element relative to its offsetParent.
-  // Composite means it takes into account transforms as well as layout.
-
-
-  function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
+  // Composite means it takes into account transforms as well as layout.function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     if (isFixed === void 0) {
       isFixed = false;
     }
@@ -3365,10 +3278,7 @@
 
           if (!areValidElements(reference, popper)) {
             return;
-          } // Store the reference and popper rects to be read by modifiers
-
-
-          state.rects = {
+          } // Store the reference and popper rects to be read by modifiers        state.rects = {
             reference: getCompositeRect(reference, getOffsetParent(popper), state.options.strategy === 'fixed'),
             popper: getLayoutRect(popper)
           }; // Modifiers have the ability to reset the current update cycle. The
@@ -3529,10 +3439,7 @@
    * Bootstrap dropdown.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -3897,10 +3804,7 @@
    * Bootstrap util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4022,10 +3926,7 @@
    * Bootstrap util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4121,10 +4022,7 @@
    * Bootstrap util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4219,10 +4117,7 @@
    * Bootstrap modal.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4524,10 +4419,7 @@
    * Bootstrap offcanvas.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4848,10 +4740,7 @@
    * Bootstrap util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -4984,10 +4873,7 @@
    * Bootstrap tooltip.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -5496,10 +5382,7 @@
    * Bootstrap popover.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -5577,10 +5460,7 @@
    * Bootstrap scrollspy.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -5837,10 +5717,7 @@
    * Bootstrap tab.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 
@@ -6107,10 +5984,7 @@
    * Bootstrap toast.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
-   */
-
-
-  /**
+   *//**
    * Constants
    */
 

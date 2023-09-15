@@ -1,2 +1,3 @@
 # Photo-Gallery
-Photo Gallery Website Featuring pictures that I took
+A Photo Gallery website is an website designed to showcase and organize collections of images or photographs that i took
+
